@@ -1,0 +1,160 @@
+/*
+page title: Cinzel
+h2-h6: Lora
+paragraph: Open Sans
+*/
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.65;
+}
+
+p {
+  margin-bottom: 1.15em;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 2.488em;
+}
+
+h2 {
+  font-size: 2.074em;
+}
+
+h3 {
+  font-size: 1.728em;
+}
+
+h4 {
+  font-size: 1.44em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+small {
+  font-size: 0.833em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
+}
+
+/*
+ screen sizes
+ ============
+ - small < 40em
+ - medium 40em < 64em
+ - large 64em >
+*/
+main {
+  margin: 0 auto;
+}
+@media screen and (min-width: 64em) {
+  main {
+    max-width: 64em;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  main {
+    padding: 0 1em 1em 1em;
+  }
+}
+@media screen and (max-width: 39.99em) {
+  main {
+    padding: 0 1em 1em 1em;
+  }
+}
+
+@media screen and (max-width: 39.99em) {
+  article {
+    column-count: 1;
+    padding: 1em 0 0 0;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  article {
+    column-count: 2;
+    padding: 2em 0;
+  }
+}
+@media screen and (min-width: 64em) {
+  article {
+    column-count: 3;
+    padding: 2em 0;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.page-subtitle {
+  text-align: center;
+}
+
+a {
+  color: #d02000;
+}
+a:visited {
+  color: #4d4d4d;
+}
+a:hover {
+  color: #a91a00;
+}
+a:active {
+  color: #4d4d4d;
+}
+
+@media screen and (max-width: 39.99em) {
+  .title {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  .title {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 64em) {
+  .title {
+    width: 70%;
+    padding-top: 0.35em;
+  }
+}
+
+@media screen and (max-width: 39.99em) {
+  .subtitle {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.99em) {
+  .subtitle {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 64em) {
+  .subtitle {
+    width: 70%;
+  }
+}
+
+.author {
+  font-weight: 600;
+}
+
+.top {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=app.css.map */

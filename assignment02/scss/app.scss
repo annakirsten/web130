@@ -1,0 +1,74 @@
+@import 'fonts';
+@import 'size';
+@import 'links';
+
+main {
+    margin: 0 auto;
+    @include size(large) {
+        max-width: 64em;
+    }
+    @include size(medium) {
+        padding: 0 1em 1em 1em;
+    }
+    @include size(small) {
+        padding: 0 1em 1em 1em;
+    }
+}
+
+article {
+    @include size(small) {
+        column-count: 1;
+        padding: 1em 0 0 0;
+    }
+    @include size(medium) {
+        column-count: 2;
+        padding: 2em 0;
+    }
+    @include size(large) {
+        column-count: 3;
+        padding: 2em 0;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+.page-subtitle {
+    text-align: center;
+}
+
+@include links (#d02000, #4d4d4d, #a91a00, #4d4d4d);
+
+.title {
+    @include size(small) {
+        width: 100%;
+    }
+    @include size(medium) {
+        width: 100%;
+    }
+    @include size(large) {
+        width: 70%;
+        padding-top: .35em;
+    }
+}
+
+.subtitle {
+    @include size(small) {
+        width: 100%;
+    }
+    @include size(medium) {
+        width: 100%;
+    }
+    @include size(large) {
+        width: 70%;
+    }
+}
+
+.author {
+    font-weight: 600;
+}
+
+.top {
+    margin-top: 0;
+}

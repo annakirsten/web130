@@ -1,0 +1,53 @@
+/*
+page title: Cinzel
+h2-h6: Lora
+paragraph: Open Sans
+*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+}
+  
+p {
+    margin-bottom: 1.15em;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: 1.5;
+
+}
+
+h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2.488em;
+}
+
+h2 {
+    font-size: 2.074em;
+}
+
+h3 {
+    font-size: 1.728em;
+}
+
+h4 {
+    font-size: 1.44em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+small {
+    font-size: 0.833em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lora', serif;
+}
