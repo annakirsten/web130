@@ -1,0 +1,187 @@
+@import 'colors';
+@import 'size';
+
+nav {
+
+    #menu-icon {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        width: 34px;
+        height: 22px;
+        margin: 10px 0 0 10px;
+        background-image: url('/images/Hamburger.png');
+        background-repeat: no-repeat;
+
+        /* hide #menu-icon on md and lg screens */
+        @include size(md) {
+            display: none;
+        }
+
+        @include size(lg) {
+            display: none;
+        }
+
+        &.toggle {
+            width: 27px;
+            height: 27px;
+            background: url('/images/X-Icon.png');
+        }
+    }
+
+    #menu-header {
+        display: block;
+        cursor: pointer;
+        background-color: $lt-blue;
+        width: 100%;
+        height: 45px;
+        padding: 10px 0;
+        border-bottom: 1px solid white;
+        text-align: center;
+
+        /* hide #menu-header on md and lg screens */
+        @include size(md) {
+            display: none;
+        }
+
+        @include size(lg) {
+            display: none;
+        }
+    }
+
+    #menu-toggle {
+        display: none; // hide menu-toggle checkbox
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: $lt-blue;
+        width: 100%;
+        margin: 0;
+        padding-inline-start: 0;
+        list-style-type: none;
+
+        /* all menus display vertically on sm screens */
+        @include size(sm) {
+            flex-direction: column;
+        }
+
+        li {
+            /* sets flex values on md screens */
+            @include size(md) {
+                flex-grow: 1;
+            }
+
+            /* aids in correct background coloring on lg screens */
+            @include size(lg) {
+                position: relative;
+            }
+
+            &:last-child {
+                @include size(sm) {
+                    border-bottom: 1px solid white;
+                }
+            }
+
+            a {
+                display: block;
+                background-color: $lt-blue;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-bottom: 1px solid white;
+
+                &.active {
+                    background-color: $drk-blue;
+
+                    @include size(sm) {
+                        background-color: $lt-blue; // active item remains light blue on sm screens
+                    }
+                }
+
+                @include size(lg) {
+                    text-align: left;
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        &#menu {
+            @include size(md) {
+                > li a {
+                    border-right: 1px solid white;
+                }
+
+                > li:last-child a {
+                    border-right: none;
+                }
+            }
+
+            @include size(lg) {
+                > li a {
+                    border-bottom: 0;
+                    border-right: 1px solid white;
+                }
+
+                > li:last-child a {
+                    border-right: none;
+                }
+            }
+
+            > .nav-item {
+                @include size(sm) {
+                    display: none;
+                }
+            }
+
+            .nav-item.open {
+                display: block;
+            }
+
+            .nav-sub {
+                display: none;
+
+                /* horizontal display on md screens and full width */
+                @include size(md) {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                }
+
+                @include size(lg) {
+                    position: absolute; // aids in correct background coloring on lg screens
+                    flex-direction: column; // sub-menu displays vertically on lg screen
+                }
+
+                > li:last-child a {
+                    @include size(lg) {
+                        height: 50px;
+                    }
+                }
+
+                &.open {
+                    display: block;
+
+                    /* horizontal display on md screens and justified spacing */
+                    @include size(md) {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+
+                a {
+                    @include size(sm) {
+                        border-bottom: 0;
+                    }
+
+                    @include size(md) {
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
