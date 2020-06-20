@@ -1,0 +1,25 @@
+@import 'size';
+
+html {
+    font-family: 'Roboto', sans-serif;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: 'Lora', serif;
+    }
+
+    .navbar-brand {
+        font-family: 'Yeseva One', cursive;
+        font-size: 40px;
+
+        @include size(sm) {
+            font-size: 24px;
+        }
+    }
+
+    .small {
+        font-variant: small-caps;
+      }
+}

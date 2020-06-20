@@ -1,0 +1,23 @@
+/*
+ screen sizes
+ ============
+ - sm < 40em
+ - md 40em < 64em
+ - lg 64em >
+*/
+
+@mixin size($size) {
+    @if $size == sm {
+        @media screen and (max-width: 576px) {
+            @content;
+        }
+    } @else if $size == md {
+        @media screen and (min-width: 577px) and (max-width: 768px) {
+            @content;
+        }
+    } @else if $size == lg {
+        @media screen and (min-width: 769px) {
+            @content;
+        }
+    }
+}
