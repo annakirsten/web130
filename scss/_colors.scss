@@ -1,0 +1,71 @@
+$honey: #dcae1d;
+$navy: #00303f;
+$blue: #2f5663;
+$charcoal: #3d3f40;
+$gray: #5a6268;
+
+body {
+    background-color: #e6ecf3;
+
+    a {
+        color: $navy;
+    
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    .btn-primary {
+        color: white;
+        background-color: $navy;
+        border: 2px solid $blue;
+    
+        &:hover {
+            background-color: $blue;
+            border: 2px solid $blue;
+        }
+    }
+    
+    .btn-secondary {
+        background-color: $charcoal;
+        border: 2px solid $gray;
+    
+        &:hover {
+            background-color: $gray;
+            border: 2px solid $gray;
+        }
+    
+    }    
+
+    .navbar {
+        background-color: $honey;
+    
+        a {
+            color: $navy;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    
+        .navbar-toggler {
+            border-color: $navy;
+        }
+
+        .navbar-toggler:focus,
+        .navbar-toggler:active,
+        .navbar-toggler-icon:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .dropdown-menu {
+            background-color: white;
+            border: 1px solid $gray;
+        }
+    }
+    
+    main {
+        background-color: #f7f9fb;
+    }
+}
